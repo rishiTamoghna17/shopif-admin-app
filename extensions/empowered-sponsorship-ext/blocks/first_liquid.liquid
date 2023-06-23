@@ -1,0 +1,22 @@
+<span style="color: {{ block.settings.color }}">
+first liquid created
+</span>
+<br/>
+<h1>{{page_title}}</h1>
+
+{% render "app_snippet" %}
+{% schema %}
+{
+    "name": "Hello World",
+    "target": "section",
+    "enabled_on": {
+      "templates": ["index"]
+    },
+    "stylesheet": "app.css",
+    "javascript": "app.js",
+    "settings": [
+        { "label": "Color", "id": "color", "type": "color", "default": "#000000" }
+    ]
+}
+{% endschema %}
+
