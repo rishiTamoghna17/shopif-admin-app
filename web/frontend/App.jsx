@@ -23,16 +23,16 @@ export default function App() {
             <NavigationMenu
               navigationLinks={[
                 {
-                  label: t("NavigationMenu.pageName"),
-                  destination: "/pagename",
+                  label: "Products",
+                  destination: "/products",
                 },
                 {
                   label: "Plans and Pricing",
                   destination: "/plans",
                 },
                 {
-                  label: "Tutorial Videos",
-                  destination: "/tutorialvideos",
+                  label: "orders",
+                  destination: "/orders",
                 },
               ]}
             />

@@ -1,23 +1,39 @@
-import { Page, Layout } from "@shopify/polaris";
-import { useTranslation, Trans } from "react-i18next";
+import {
+  Card,
+  Page,
+  Layout,
+  Stack,
+  Select,
+  Button,
+  ButtonGroup,
+} from "@shopify/polaris";
 import Sidebar from "../components/Sidebar";
-import {LegacyStack, Badge} from '@shopify/polaris';
 import { ProductsCard } from "../components";
+import SectionSteps from "../components/SectionSteps";
 
 export default function HomePage() {
-  const { t } = useTranslation();
   return (
-    <Page narrowWidth>
-      <LegacyStack >
-        <Badge>
+    <Page fullWidth>
+      <Stack wrap={false}>
+
+        <Stack.Item>
           <Sidebar />
-        </Badge>
-      </LegacyStack>
-      <Layout>
-        <Layout.Section>
-          <ProductsCard />
-        </Layout.Section>
-      </Layout>
+        </Stack.Item>
+
+        <Stack.Item fill>
+
+          <Layout>
+            <Layout.Section>
+              <ProductsCard />
+            </Layout.Section>
+
+            <Layout.Section>
+              <SectionSteps />
+            </Layout.Section> 
+          </Layout>
+
+        </Stack.Item>
+      </Stack>
     </Page>
   );
 }

@@ -33,7 +33,7 @@ export function ProductsCard() {
   const handlePopulate = async () => {
     setIsLoading(true);
     const response = await fetch("/api/products/create");
-    console.log(response.json())
+    console.log(response.json());
     if (response.ok) {
       await refetchProductCount();
       setToastProps({
@@ -53,22 +53,22 @@ export function ProductsCard() {
   const fetchCollection = async () => {
     try {
       const response = await fetch("/api/collections/450508325164");
-      // console.log(await response.json());
+      console.log(await response.json());
     } catch (err) {
       console.log(err);
     }
   };
   fetchCollection();
 
-  const fetchOrders = async()=>{
-    try{
-      const response = await fetch("/api/orders");
-      // console.log(await response.json());
-    }catch (err) {
+  const fetchOrders = async () => {
+    try {
+      await fetch("/api/orders");
+      console.log(await response.json());
+    } catch (err) {
       console.log(err);
     }
-  }
-  fetchOrders()
+  };
+  fetchOrders();
   //*********************************************** */
 
   return (
