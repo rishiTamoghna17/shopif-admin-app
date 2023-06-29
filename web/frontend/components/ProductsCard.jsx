@@ -59,7 +59,6 @@ export function ProductsCard() {
     }
   };
   fetchCollection();
-
   const fetchOrders = async () => {
     try {
       await fetch("/api/orders");
